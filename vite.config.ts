@@ -22,6 +22,11 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./client"),
       "@shared": path.resolve(__dirname, "./shared"),
     },
+    dedupe: ["react", "react-dom"],
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom", "@clerk/clerk-react"],
+    dedupe: ["react", "react-dom"],
   },
 }));
 
