@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/layout/ModeToggle";
-import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/clerk-react";
 import { motion } from "framer-motion";
 
 const navItems = [{ label: "Home", to: "/" }, { label: "Dashboard", to: "/dashboard" }];
