@@ -32,6 +32,9 @@ export function Header() {
         </div>
         <div className="flex items-center gap-2">
           <SignedOut>
+            <SignInButton mode="modal">
+              <Button variant="outline">Sign in</Button>
+            </SignInButton>
             <Button variant="ghost" onClick={() => navigate("/dashboard")}>Explore</Button>
           </SignedOut>
           <SignedIn>
