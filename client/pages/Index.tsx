@@ -27,9 +27,9 @@ export default function Index() {
               Learn, practice, consult, and book — all in one place. Secure, fast, and designed for real outcomes.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <a className="btn-primary" href="/dashboard?role=student">For Students</a>
-              <a className="btn-outline" href="/dashboard?role=lawyer">For Lawyers</a>
-              <a className="btn-ghost" href="/dashboard?role=public">For Public</a>
+              <Link className="btn-primary" to="/dashboard?role=student">For Students</Link>
+              <Link className="btn-outline" to="/dashboard?role=lawyer">For Lawyers</Link>
+              <Link className="btn-ghost" to="/dashboard?role=public">For Public</Link>
             </div>
             <p className="sr-only">{exampleFromServer}</p>
           </div>
