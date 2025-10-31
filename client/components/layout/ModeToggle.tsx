@@ -4,7 +4,10 @@ import { Button } from "@/components/ui/button";
 
 export function ModeToggle() {
   const [theme, setTheme] = useState<string>(() =>
-    typeof document !== "undefined" && document.documentElement.classList.contains("dark") ? "dark" : "light",
+    typeof document !== "undefined" &&
+    document.documentElement.classList.contains("dark")
+      ? "dark"
+      : "light",
   );
 
   useEffect(() => {
@@ -14,8 +17,17 @@ export function ModeToggle() {
   }, [theme]);
 
   return (
-    <Button variant="ghost" size="icon" aria-label="Toggle theme" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-      {theme === "dark" ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+    <Button
+      variant="ghost"
+      size="icon"
+      aria-label="Toggle theme"
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+    >
+      {theme === "dark" ? (
+        <Sun className="h-4 w-4" />
+      ) : (
+        <Moon className="h-4 w-4" />
+      )}
     </Button>
   );
 }

@@ -2,10 +2,18 @@ import { PropsWithChildren } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/layout/ModeToggle";
-import { SignedIn, SignedOut, UserButton, SignInButton } from "@clerk/clerk-react";
+import {
+  SignedIn,
+  SignedOut,
+  UserButton,
+  SignInButton,
+} from "@clerk/clerk-react";
 import { motion } from "framer-motion";
 
-const navItems = [{ label: "Home", to: "/" }, { label: "Dashboard", to: "/dashboard" }];
+const navItems = [
+  { label: "Home", to: "/" },
+  { label: "Dashboard", to: "/dashboard" },
+];
 
 export function Header() {
   const location = useLocation();
@@ -16,7 +24,9 @@ export function Header() {
         <div className="flex items-center gap-4">
           <Link to="/" className="flex items-center gap-2">
             <Logo />
-            <span className="font-extrabold tracking-tight text-xl">Legal Hub</span>
+            <span className="font-extrabold tracking-tight text-xl">
+              Legal Hub
+            </span>
           </Link>
           <nav className="hidden md:flex items-center gap-2">
             {navItems.map((item) => (
@@ -35,14 +45,22 @@ export function Header() {
             <SignInButton mode="modal">
               <Button variant="outline">Sign in</Button>
             </SignInButton>
-            <Button variant="ghost" onClick={() => navigate("/dashboard")}>Explore</Button>
+            <Button variant="ghost" onClick={() => navigate("/dashboard")}>
+              Explore
+            </Button>
           </SignedOut>
           <SignedIn>
             <UserButton afterSignOutUrl="/" />
           </SignedIn>
           <ModeToggle />
           <Button asChild className="hidden sm:inline-flex" size="sm">
-            <a href="https://builder.io/c/docs/projects" target="_blank" rel="noreferrer">Deploy</a>
+            <a
+              href="https://builder.io/c/docs/projects"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Deploy
+            </a>
           </Button>
         </div>
       </div>
@@ -56,9 +74,15 @@ export function Footer() {
       <div className="container py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
         <p>© {new Date().getFullYear()} Legal Hub. All rights reserved.</p>
         <div className="flex items-center gap-4">
-          <a href="/" className="hover:text-foreground">Privacy</a>
-          <a href="/" className="hover:text-foreground">Terms</a>
-          <a href="/" className="hover:text-foreground">Contact</a>
+          <a href="/" className="hover:text-foreground">
+            Privacy
+          </a>
+          <a href="/" className="hover:text-foreground">
+            Terms
+          </a>
+          <a href="/" className="hover:text-foreground">
+            Contact
+          </a>
         </div>
       </div>
     </footer>

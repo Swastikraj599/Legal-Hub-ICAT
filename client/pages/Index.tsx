@@ -22,32 +22,56 @@ export default function Index() {
           <div>
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
               Legal Hub
-              <span className="block text-foreground/80 text-xl md:text-2xl font-semibold mt-3">One platform for Students, Lawyers, and the Public</span>
+              <span className="block text-foreground/80 text-xl md:text-2xl font-semibold mt-3">
+                One platform for Students, Lawyers, and the Public
+              </span>
             </h1>
             <p className="mt-5 text-lg text-muted-foreground max-w-prose">
-              Learn, practice, consult, and book — all in one place. Secure, fast, and designed for real outcomes.
+              Learn, practice, consult, and book — all in one place. Secure,
+              fast, and designed for real outcomes.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link className="btn-primary" to="/dashboard?role=student">For Students</Link>
-              <Link className="btn-outline" to="/dashboard?role=lawyer">For Lawyers</Link>
-              <Link className="btn-ghost" to="/dashboard?role=public">For Public</Link>
+              <Link className="btn-primary" to="/dashboard?role=student">
+                For Students
+              </Link>
+              <Link className="btn-outline" to="/dashboard?role=lawyer">
+                For Lawyers
+              </Link>
+              <Link className="btn-ghost" to="/dashboard?role=public">
+                For Public
+              </Link>
             </div>
             <p className="sr-only">{exampleFromServer}</p>
           </div>
           <div className="relative">
             <div className="rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 p-6 border">
-              <img src="/placeholder.svg" alt="Dashboard preview" className="rounded-lg w-full h-auto" />
+              <img
+                src="/placeholder.svg"
+                alt="Dashboard preview"
+                className="rounded-lg w-full h-auto"
+              />
             </div>
           </div>
         </div>
       </section>
 
       <section className="container py-14">
-        <h2 className="text-2xl font-bold tracking-tight mb-6">Why Legal Hub</h2>
+        <h2 className="text-2xl font-bold tracking-tight mb-6">
+          Why Legal Hub
+        </h2>
         <div className="grid gap-4 md:grid-cols-3">
-          <Feature title="Mock tests & instant results" desc="Practice with curated questions and see results instantly with explanations." />
-          <Feature title="Find & book lawyers" desc="Search by specialization and city, chat securely, and book appointments." />
-          <Feature title="Real-time analytics" desc="Track learning progress and earnings with rich, interactive charts." />
+          <Feature
+            title="Mock tests & instant results"
+            desc="Practice with curated questions and see results instantly with explanations."
+          />
+          <Feature
+            title="Find & book lawyers"
+            desc="Search by specialization and city, chat securely, and book appointments."
+          />
+          <Feature
+            title="Real-time analytics"
+            desc="Track learning progress and earnings with rich, interactive charts."
+          />
         </div>
       </section>
 
@@ -55,11 +79,17 @@ export default function Index() {
         <div className="rounded-2xl border bg-gradient-to-r from-primary/10 via-transparent to-accent/10 p-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div>
             <h3 className="text-xl font-semibold">Ready to get started?</h3>
-            <p className="text-muted-foreground">Sign in with Clerk and explore the unified dashboard.</p>
+            <p className="text-muted-foreground">
+              Sign in with Clerk and explore the unified dashboard.
+            </p>
           </div>
           <div className="flex gap-3">
-            <a className="btn-primary" href="/dashboard">Open Dashboard</a>
-            <a className="btn-outline" href="/dashboard?role=public">Find a lawyer</a>
+            <a className="btn-primary" href="/dashboard">
+              Open Dashboard
+            </a>
+            <a className="btn-outline" href="/dashboard?role=public">
+              Find a lawyer
+            </a>
           </div>
         </div>
       </section>
